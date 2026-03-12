@@ -1,0 +1,106 @@
+{
+  "info": {
+    "_postman_id": "4f3cefa6-b662-44ef-bf5b-6cfe28bdd111",
+    "name": "Python API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "6890752"
+  },
+  "item": [
+    {
+      "name": "New Transaction",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user_id\": \"1033554\",\r\n    \"amount\": 100,\r\n    \"type\": \"Test\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/transactions/create",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "transactions",
+            "create"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Summarize",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"text\": \"Los valores son los principios, virtudes o cualidades que caracterizan a una persona, acción u objeto, considerados positivos o de gran importancia para un grupo social. Actúan como una brújula interna que guía el comportamiento, la toma de decisiones y determina lo que se considera correcto, honesto o justo, influyendo en la convivencia diaria\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/assistant/summarize",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "assistant",
+            "summarize"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Async Trasanction",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"user_id\": \"1\",\r\n    \"amount\": 100,\r\n    \"type\": \"Test\"\r\n\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/transactions/async-process",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "transactions",
+            "async-process"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
